@@ -41,7 +41,28 @@
 
 ## API Testing
 
-> *Coming soon — contributions welcome.*
+### Clients and GUI Tools
+
+- [Postman](https://github.com/postmanlabs/postman-app-support) - API platform for building, testing, and documenting APIs with support for REST, GraphQL, and SOAP.
+- [Bruno](https://github.com/usebruno/bruno) - Git-native, offline-first API client that stores collections as plain-text files directly in your repository.
+- [Hoppscotch](https://github.com/hoppscotch/hoppscotch) - Lightweight, web-based API development suite supporting REST, GraphQL, WebSocket, and MQTT protocols.
+- [Insomnia](https://github.com/Kong/insomnia) - Open-source API client for REST, GraphQL, gRPC, and SOAP with environment management and test scripting.
+
+### CLI and Automation
+
+- [Newman](https://github.com/postmanlabs/newman) - Command-line collection runner for Postman that integrates with CI/CD pipelines.
+- [Hurl](https://github.com/Orange-OpenSource/hurl) - Command-line tool for running HTTP requests defined in plain text files, with built-in assertions.
+
+### Code-Based Frameworks
+
+- [REST Assured](https://github.com/rest-assured/rest-assured) - Java DSL for writing readable and maintainable tests for REST APIs with BDD-style syntax.
+- [Karate DSL](https://github.com/karatelabs/karate) - Unified framework combining API testing, mocking, performance testing, and UI automation in a single BDD syntax.
+- [Supertest](https://github.com/ladjs/supertest) - Node.js library for testing HTTP servers using a fluent API, built on top of SuperAgent.
+
+### Mock Servers
+
+- [WireMock](https://github.com/wiremock/wiremock) - Flexible API mocking tool for stubbing and proxying HTTP services in test environments.
+- [MockServer](https://github.com/mock-server/mockserver) - Tool for mocking HTTP and HTTPS systems via expectations, proxying, and request verification.
 
 ---
 
