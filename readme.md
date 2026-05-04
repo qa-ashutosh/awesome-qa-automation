@@ -68,7 +68,22 @@
 
 ## Mobile Testing
 
-> *Coming soon — contributions welcome.*
+### Cross-Platform
+
+- [Appium](https://github.com/appium/appium) - Cross-platform automation framework for native, hybrid, and mobile web apps on iOS, Android, and Windows using the W3C WebDriver protocol.
+- [Maestro](https://github.com/mobile-dev-inc/maestro) - Simple and reliable mobile UI testing framework using YAML-based syntax with built-in handling for flaky UI elements.
+- [Detox](https://github.com/wix/Detox) - Gray-box end-to-end testing framework for React Native apps on iOS and Android with automatic synchronization.
+
+### Android
+
+- [Espresso](https://developer.android.com/training/testing/espresso) - Google's official Android UI testing framework with fast, reliable test execution and tight integration with Android Studio.
+- [UIAutomator2](https://github.com/appium/appium-uiautomator2-driver) - Appium driver leveraging Android's UIAutomator2 framework for black-box UI automation across apps and system dialogs.
+- [Kaspresso](https://github.com/KasperskyLab/Kaspresso) - Android UI test framework built on top of Espresso and UIAutomator with DSL wrappers, interceptors, and Allure reporting support.
+
+### iOS
+
+- [XCUITest](https://developer.apple.com/documentation/xctest) - Apple's native UI testing framework bundled with Xcode for writing and running tests on iOS, iPadOS, and macOS.
+- [EarlGrey 2](https://github.com/google/EarlGrey/tree/earlgrey2) - Google's iOS UI automation framework that combines white-box testing capabilities with XCUITest for reliable, synchronized test execution.
 
 ---
 
