@@ -97,7 +97,18 @@
 
 ## Performance Testing
 
-> *Coming soon — contributions welcome.*
+### Load Testing Frameworks
+
+- [k6](https://github.com/grafana/k6) - Developer-friendly load testing tool by Grafana Labs with JavaScript scripting, CI/CD integration, and real-time Grafana dashboards.
+- [Apache JMeter](https://github.com/apache/jmeter) - Battle-tested Java-based load testing tool with a GUI test plan builder supporting HTTP, JDBC, FTP, SOAP, and more protocols.
+- [Gatling](https://github.com/gatling/gatling) - Code-first load testing tool with a Scala/Java/Kotlin DSL, built for high-throughput simulations and CI/CD pipelines.
+- [Locust](https://github.com/locustio/locust) - Python-based distributed load testing tool with a real-time web UI and native OpenTelemetry integration.
+
+### Developer CLI Tools
+
+- [Artillery](https://github.com/artilleryio/artillery) - Modern load testing toolkit supporting HTTP, GraphQL, WebSocket, and gRPC with YAML-based scripts and Playwright browser integration.
+- [Vegeta](https://github.com/tsenart/vegeta) - Go-based HTTP load testing tool designed for constant-rate request testing with composable pipelines and detailed latency histograms.
+- [autocannon](https://github.com/mcollina/autocannon) - Fast HTTP/1.1 benchmarking tool written in Node.js with support for HTTP pipelining, HTTPS, and real-time latency histograms.
 
 ---
 
