@@ -114,7 +114,21 @@
 
 ## Security Testing
 
-> *Coming soon — contributions welcome.*
+### DAST Scanners
+
+- [OWASP ZAP](https://github.com/zaproxy/zaproxy) - Open-source DAST tool with automated scanning, intercepting proxy, fuzzer, and a YAML automation framework for CI/CD pipeline integration.
+- [Burp Suite Community](https://portswigger.net/burp/communitydownload) - Industry-standard web security testing platform with an intercepting proxy, repeater, and manual penetration testing tools.
+
+### Penetration Testing
+
+- [Nikto](https://github.com/sullo/nikto) - Web server scanner that detects dangerous files, outdated software, and common misconfigurations across over 6,700 checks.
+- [SQLMap](https://github.com/sqlmapproject/sqlmap) - Automated penetration testing tool that detects and exploits SQL injection vulnerabilities across all major database engines.
+
+### SAST and Dependency Scanning
+
+- [Semgrep](https://github.com/semgrep/semgrep) - Fast, lightweight static analysis tool supporting 30+ languages with customizable rules for catching security vulnerabilities early in CI/CD.
+- [Trivy](https://github.com/aquasecurity/trivy) - Comprehensive vulnerability scanner for containers, filesystems, Git repositories, Kubernetes, and IaC configurations.
+- [Snyk](https://snyk.io) - Developer security platform for scanning open-source dependencies, containers, and IaC for vulnerabilities with fix suggestions and CI/CD integration.
 
 ---
 
