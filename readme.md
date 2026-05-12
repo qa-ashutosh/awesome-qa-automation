@@ -134,7 +134,21 @@
 
 ## Accessibility Testing
 
-> *Coming soon — contributions welcome.*
+### Automated Testing Engines
+
+- [axe-core](https://github.com/dequelabs/axe-core) - Accessibility testing engine by Deque that integrates with Selenium, Playwright, Cypress, and Jest to catch WCAG violations automatically.
+- [Lighthouse](https://github.com/GoogleChrome/lighthouse) - Google's open-source tool for auditing web page accessibility, performance, SEO, and best practices with CI integration via Lighthouse CI.
+
+### CLI Tools
+
+- [Pa11y](https://github.com/pa11y/pa11y) - Node.js-based accessibility testing tool that runs WCAG audits via command line with support for axe and HTML CodeSniffer runners.
+- [Pa11y CI](https://github.com/pa11y/pa11y-ci) - CI-centric accessibility test runner built on Pa11y for testing against lists of URLs or sitemaps in automated pipelines.
+
+### Browser Extensions
+
+- [WAVE](https://wave.webaim.org) - WebAIM's browser extension that visually annotates accessibility issues directly on the page for quick manual audits.
+- [IBM Equal Access Toolkit](https://github.com/IBMa/equal-access) - IBM's open-source accessibility checker with browser extension and CI integration, powered by IBM's accessibility rule engine.
+- [Accessibility Insights](https://github.com/microsoft/accessibility-insights-web) - Microsoft's browser extension for fast checks and guided WCAG 2.1 AA assessments with detailed step-by-step evaluation workflows.
 
 ---
 
