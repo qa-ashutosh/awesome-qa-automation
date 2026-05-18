@@ -1,29 +1,29 @@
 # Awesome QA Automation [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-> A curated list of tools, frameworks, and resources for software quality assurance and test automation.
+> Tools, frameworks, and resources for QA engineers and test automation professionals.
 
 ---
 
 ## Contents
 
-- [UI Test Automation](#ui-test-automation)
-- [API Testing](#api-testing)
-- [Mobile Testing](#mobile-testing)
-- [Performance Testing](#performance-testing)
-- [Security Testing](#security-testing)
-- [Accessibility Testing](#accessibility-testing)
-- [Unit and Integration Testing](#unit-and-integration-testing)
-- [Visual Regression Testing](#visual-regression-testing)
-- [Test Management and Reporting](#test-management-and-reporting)
-- [CI/CD and Test Infrastructure](#cicd-and-test-infrastructure)
-- [AI-Assisted Testing](#ai-assisted-testing)
-- [Contract and Chaos Testing](#contract-and-chaos-testing)
-- [Learning Resources](#learning-resources)
-- [Hall of QA Failures](#hall-of-qa-failures)
+- [🌐 UI Test Automation](#-ui-test-automation)
+- [🔌 API Testing](#-api-testing)
+- [📱 Mobile Testing](#-mobile-testing)
+- [⚡ Performance Testing](#-performance-testing)
+- [🔒 Security Testing](#-security-testing)
+- [♿ Accessibility Testing](#-accessibility-testing)
+- [🧪 Unit and Integration Testing](#-unit-and-integration-testing)
+- [👁 Visual Regression Testing](#-visual-regression-testing)
+- [📋 Test Management and Reporting](#-test-management-and-reporting)
+- [🔧 CI/CD and Test Infrastructure](#-cicd-and-test-infrastructure)
+- [🤖 AI-Assisted Testing](#-ai-assisted-testing)
+- [💥 Contract and Chaos Testing](#-contract-and-chaos-testing)
+- [📚 Learning Resources](#-learning-resources)
+- [💀 Hall of QA Failures](#-hall-of-qa-failures)
 
 ---
 
-## UI Test Automation
+## 🌐 UI Test Automation
 
 ### Multi-Browser Frameworks
 
@@ -47,7 +47,7 @@
 
 ---
 
-## API Testing
+## 🔌 API Testing
 
 ### Clients and GUI Tools
 
@@ -74,7 +74,7 @@
 
 ---
 
-## Mobile Testing
+## 📱 Mobile Testing
 
 ### Cross-Platform
 
@@ -95,7 +95,7 @@
 
 ---
 
-## Performance Testing
+## ⚡ Performance Testing
 
 ### Load Testing Frameworks
 
@@ -112,7 +112,7 @@
 
 ---
 
-## Security Testing
+## 🔒 Security Testing
 
 ### DAST Scanners
 
@@ -132,7 +132,7 @@
 
 ---
 
-## Accessibility Testing
+## ♿ Accessibility Testing
 
 ### Automated Testing Engines
 
@@ -152,43 +152,66 @@
 
 ---
 
-## Unit and Integration Testing
+## 🧪 Unit and Integration Testing
+
+### JavaScript
+
+- [Jest](https://github.com/jestjs/jest) - Zero-configuration JavaScript testing framework by Meta with built-in code coverage, snapshot testing, and parallel test execution.
+- [Vitest](https://github.com/vitest-dev/vitest) - Vite-native testing framework with Jest-compatible API, instant watch mode, and native code coverage via v8 or Istanbul.
+- [Mocha](https://github.com/mochajs/mocha) - Flexible JavaScript test framework running on Node.js with async support and compatibility with any assertion library.
+
+### Python
+
+- [Pytest](https://github.com/pytest-dev/pytest) - Full-featured Python testing framework with simple syntax, powerful fixtures, parameterized testing, and a vast plugin ecosystem.
+
+### Java
+
+- [JUnit 5](https://github.com/junit-team/junit5) - The standard unit testing framework for Java with parameterized tests, nested test classes, and a flexible extension model.
+- [TestNG](https://github.com/testng-org/testng) - Java testing framework inspired by JUnit with support for data-driven testing, parallel execution, and flexible test configuration via XML.
+- [Mockito](https://github.com/mockito/mockito) - Most popular Java mocking framework for creating and verifying test doubles with a clean, readable API.
+
+### .NET
+
+- [NUnit](https://github.com/nunit/nunit) - Mature, open-source unit testing framework for all .NET languages with rich assertion support and parallel test execution.
+- [xUnit](https://github.com/xunit/xunit) - Community-focused unit testing framework for .NET emphasizing simplicity, extensibility, and clean test isolation.
+
+### Integration Testing
+
+- [Testcontainers](https://github.com/testcontainers/testcontainers-java) - Library for spinning up real Docker containers in tests for databases, browsers, and any other dependency, with official SDKs for Java, Node.js, Python, Go, .NET, and Rust.
+
+---
+
+## 👁 Visual Regression Testing
 
 > *Coming soon — contributions welcome.*
 
 ---
 
-## Visual Regression Testing
+## 📋 Test Management and Reporting
 
 > *Coming soon — contributions welcome.*
 
 ---
 
-## Test Management and Reporting
+## 🔧 CI/CD and Test Infrastructure
 
 > *Coming soon — contributions welcome.*
 
 ---
 
-## CI/CD and Test Infrastructure
+## 🤖 AI-Assisted Testing
 
 > *Coming soon — contributions welcome.*
 
 ---
 
-## AI-Assisted Testing
+## 💥 Contract and Chaos Testing
 
 > *Coming soon — contributions welcome.*
 
 ---
 
-## Contract and Chaos Testing
-
-> *Coming soon — contributions welcome.*
-
----
-
-## Learning Resources
+## 📚 Learning Resources
 
 ### Official Docs
 
@@ -212,7 +235,7 @@
 
 ---
 
-## Hall of QA Failures
+## 💀 Hall of QA Failures
 
 > Real-world production bugs, outages, and failures — each mapped to the specific test type that would have prevented it.
 
