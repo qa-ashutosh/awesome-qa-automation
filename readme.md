@@ -15,7 +15,7 @@
 - [🧪 Unit and Integration Testing](#-unit-and-integration-testing)
 - [👁 Visual Regression Testing](#-visual-regression-testing)
 - [📋 Test Management and Reporting](#-test-management-and-reporting)
-- [⚙️ CI/CD and Test Infrastructure](#-cicd-and-test-infrastructure)
+- [🔧 CI/CD and Test Infrastructure](#-cicd-and-test-infrastructure)
 - [🤖 AI-Assisted Testing](#-ai-assisted-testing)
 - [💥 Contract and Chaos Testing](#-contract-and-chaos-testing)
 - [📚 Learning Resources](#-learning-resources)
@@ -193,7 +193,7 @@
 
 ---
 
-## ⚙ CI/CD and Test Infrastructure
+## 🔧 CI/CD and Test Infrastructure
 
 > *Coming soon — contributions welcome.*
 
