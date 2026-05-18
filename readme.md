@@ -6,20 +6,20 @@
 
 ## Contents
 
-- [UI Test Automation](#ui-test-automation)
-- [API Testing](#api-testing)
-- [Mobile Testing](#mobile-testing)
-- [Performance Testing](#performance-testing)
-- [Security Testing](#security-testing)
-- [Accessibility Testing](#accessibility-testing)
-- [Unit and Integration Testing](#unit-and-integration-testing)
-- [Visual Regression Testing](#visual-regression-testing)
-- [Test Management and Reporting](#test-management-and-reporting)
-- [CI/CD and Test Infrastructure](#cicd-and-test-infrastructure)
-- [AI-Assisted Testing](#ai-assisted-testing)
-- [Contract and Chaos Testing](#contract-and-chaos-testing)
-- [Learning Resources](#learning-resources)
-- [Hall of QA Failures](#hall-of-qa-failures)
+- [🌐 UI Test Automation](#-ui-test-automation)
+- [🔌 API Testing](#-api-testing)
+- [📱 Mobile Testing](#-mobile-testing)
+- [⚡ Performance Testing](#-performance-testing)
+- [🔒 Security Testing](#-security-testing)
+- [♿ Accessibility Testing](#-accessibility-testing)
+- [🧪 Unit and Integration Testing](#-unit-and-integration-testing)
+- [👁️ Visual Regression Testing](#️-visual-regression-testing)
+- [📋 Test Management and Reporting](#-test-management-and-reporting)
+- [⚙️ CI/CD and Test Infrastructure](#️-cicd-and-test-infrastructure)
+- [🤖 AI-Assisted Testing](#-ai-assisted-testing)
+- [💥 Contract and Chaos Testing](#-contract-and-chaos-testing)
+- [📚 Learning Resources](#-learning-resources)
+- [💀 Hall of QA Failures](#-hall-of-qa-failures)
 
 ---
 
