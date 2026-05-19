@@ -183,7 +183,22 @@
 
 ## 👁 Visual Regression Testing
 
-> *Coming soon — contributions welcome.*
+### Framework-Agnostic Tools
+
+- [BackstopJS](https://github.com/garris/BackstopJS) - Purpose-built visual regression tool using headless Chrome to capture and compare screenshots across viewport sizes with an interactive before/after scrubber report.
+- [reg-suit](https://github.com/reg-viz/reg-suit) - Flexible visual regression testing toolkit that handles comparison, baseline storage in S3 or GCS, and PR reporting independent of your screenshot tool.
+
+### Framework-Native
+
+- [Playwright Screenshots](https://playwright.dev/docs/screenshots) - Built-in screenshot and visual comparison API for Playwright with `toHaveScreenshot()` assertion and zero additional dependencies.
+- [jest-image-snapshot](https://github.com/americanexpress/jest-image-snapshot) - Jest matcher for image comparisons using structural similarity, written by American Express with configurable diff thresholds.
+
+### Platforms with Free Tier
+
+- [Lost Pixel](https://github.com/lost-pixel/lost-pixel) - Open-source visual regression platform supporting Storybook, Ladle, Histoire, and full-page screenshots with a self-hostable option.
+- [Argos](https://github.com/argos-ci/argos) - Open-source visual testing platform that integrates with CI pipelines and provides a collaborative UI review workflow for approving visual changes.
+- [Percy](https://percy.io) - Cloud visual testing platform by BrowserStack with AI-powered diffing, cross-browser rendering, and a free tier of 5,000 screenshots per month.
+- [Chromatic](https://www.chromatic.com) - Visual testing and review platform built by the Storybook team, turning every Storybook story into an automated visual test with a free tier for open source projects.
 
 ---
 
