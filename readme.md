@@ -204,7 +204,18 @@
 
 ## 📋 Test Management and Reporting
 
-> *Coming soon — contributions welcome.*
+### Test Management Platforms
+
+- [Kiwi TCMS](https://github.com/kiwitcms/Kiwi) - Modern open-source test case management platform with a markdown editor, CI integration, JSON/XML-RPC API, and Docker-based deployment with over 2 million pulls.
+- [TestLink](https://github.com/TestLinkOpenSourceTRMS/testlink-code) - Established open-source web-based test management system for creating test cases, managing test plans, tracking execution, and generating reports with bug tracker integrations.
+- [Squash TM](https://github.com/flzara/squash-tm) - Open-core test management platform with requirements traceability, structured test plans, execution tracking, and automation linkage for compliance-heavy teams.
+
+### Reporting Tools
+
+- [Allure Report](https://github.com/allure-framework/allure2) - Flexible, multi-language test reporting tool that generates detailed graphical reports with steps, attachments, timings, and history across all major test frameworks.
+- [ReportPortal](https://github.com/reportportal/reportportal) - AI-powered test reporting platform with real-time dashboards, failure analysis, log aggregation, and integrations for JUnit, TestNG, Cucumber, Pytest, and more.
+- [ExtentReports](https://github.com/extent-framework/extentreports-java) - Java-based test reporting library that generates interactive HTML reports with logs, screenshots, tags, and system info for Selenium and TestNG-based suites.
+- [Mochawesome](https://github.com/adamgruber/mochawesome) - HTML/JSON reporter for Mocha test runs with a clean, browser-based interface showing test context, pass/fail breakdowns, and inline screenshots.
 
 ---
 
