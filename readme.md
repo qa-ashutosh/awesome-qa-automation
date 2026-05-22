@@ -251,7 +251,27 @@
 
 ## 💥 Contract and Chaos Testing
 
-> *Coming soon — contributions welcome.*
+### Consumer-Driven Contract Testing
+
+- [Pact](https://github.com/pact-foundation/pact-reference) - Cross-language consumer-driven contract testing framework that lets API consumers define expected interactions which providers verify independently, eliminating brittle integration tests.
+- [Pact Broker](https://github.com/pact-foundation/pact_broker) - Central hub for sharing and verifying Pact contracts across teams, with can-i-deploy gates, versioning, and CI/CD pipeline integration.
+- [Spring Cloud Contract](https://github.com/spring-cloud/spring-cloud-contract) - Consumer-driven contract testing framework for Spring Boot microservices that auto-generates provider tests and WireMock stubs from Groovy DSL or YAML contracts.
+
+### Schema-Based Contract Testing
+
+- [Schemathesis](https://github.com/schemathesis/schemathesis) - Property-based contract testing tool that auto-generates and runs test cases from OpenAPI and GraphQL schemas, catching edge cases standard tests miss.
+- [Specmatic](https://github.com/znsio/specmatic) - Contract-driven development tool that turns OpenAPI, AsyncAPI, and gRPC specs into executable contracts for both testing and service virtualisation.
+
+### Kubernetes Chaos Engineering
+
+- [Chaos Mesh](https://github.com/chaos-mesh/chaos-mesh) - CNCF chaos engineering platform for Kubernetes that supports fault injection across pods, nodes, network, storage, and JVM with a visual dashboard.
+- [LitmusChaos](https://github.com/litmuschaos/litmus) - CNCF-hosted chaos engineering platform with a library of Kubernetes fault experiments, a ChaosHub for sharing experiments, and an MCP server for AI-powered chaos workflows.
+- [ChaosBlade](https://github.com/chaosblade-io/chaosblade) - Alibaba's open-source chaos engineering toolkit supporting fault injection at host, Kubernetes, JVM, C++, and Node.js levels with a CLI and REST API.
+
+### Network and Application Chaos
+
+- [Toxiproxy](https://github.com/Shopify/toxiproxy) - Shopify's TCP proxy for simulating network chaos including latency, bandwidth limits, packet loss, slow connections, and timeouts in test environments.
+- [Chaos Monkey](https://github.com/Netflix/chaosmonkey) - Netflix's pioneering chaos engineering tool that randomly terminates instances to test system resilience — the tool that started the chaos engineering discipline.
 
 ---
 
