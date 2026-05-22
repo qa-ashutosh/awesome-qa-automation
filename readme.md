@@ -221,7 +221,17 @@
 
 ## 🔧 CI/CD and Test Infrastructure
 
-> *Coming soon — contributions welcome.*
+### CI/CD Platforms
+
+- [GitHub Actions](https://docs.github.com/en/actions) - Native CI/CD platform for GitHub repositories with YAML-based workflows, a marketplace of reusable actions, and free tier for public repositories.
+- [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) - Built-in CI/CD system for GitLab with pipeline-as-code, parallel jobs, environments, and integrated security scanning — all in one platform.
+- [Jenkins](https://github.com/jenkinsci/jenkins) - Self-hosted, open-source automation server with a massive plugin ecosystem supporting build, test, and deployment pipelines for any language or platform.
+- [CircleCI](https://circleci.com) - Cloud and self-hosted CI/CD platform with fast container-based builds, test splitting, parallelism, and a free tier for open source projects.
+
+### Browser and Test Infrastructure
+
+- [Docker Selenium](https://github.com/SeleniumHQ/docker-selenium) - Official Docker images for running Selenium Grid with Chrome, Firefox, and Edge in containers, enabling scalable parallel cross-browser test execution.
+- [Playwright Docker](https://playwright.dev/docs/docker) - Official Docker images maintained by Microsoft for running Playwright tests in isolated, pre-configured containers across all supported browsers.
 
 ---
 
