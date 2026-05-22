@@ -237,7 +237,15 @@
 
 ## 🤖 AI-Assisted Testing
 
-> *Coming soon — contributions welcome.*
+### AI Test Generation
+
+- [Qodo](https://www.qodo.ai) - AI coding agent (formerly CodiumAI) that generates meaningful unit tests, reviews pull requests, and suggests code improvements directly inside VS Code and JetBrains IDEs.
+- [GitHub Copilot](https://github.com/features/copilot) - AI pair programmer by GitHub and OpenAI with a free tier that generates, completes, and explains test code across all major languages and IDEs.
+
+### AI Code Review and Static Analysis
+
+- [PR-Agent](https://github.com/qodo-ai/pr-agent) - Open-source AI tool for automated pull request reviews, test suggestions, and code analysis supporting GPT, Claude, Gemini, and self-hosted LLMs.
+- [SonarQube Community](https://github.com/SonarSource/sonarqube) - Leading open-source static analysis platform detecting bugs, vulnerabilities, and code smells across 30+ languages with CI/CD integration and a free self-hosted community edition.
 
 ---
 
