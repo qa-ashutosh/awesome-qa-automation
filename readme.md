@@ -279,23 +279,38 @@
 
 ### Official Docs
 
-> *Coming soon — contributions welcome.*
+- [Playwright Docs](https://playwright.dev/docs/intro) - Official getting started guide and full API reference for Playwright, covering all languages, browsers, and CI/CD integration.
+- [Selenium Docs](https://www.selenium.dev/documentation/) - Official Selenium documentation covering WebDriver, Grid, IDE, and best practices across all supported languages.
+- [Cypress Docs](https://docs.cypress.io) - Official Cypress documentation with guides, API reference, and real-world recipes for end-to-end testing.
+- [Appium Docs](https://appium.io/docs/en/latest/) - Official Appium documentation covering drivers, clients, plugins, and ecosystem tools for mobile automation.
+- [k6 Docs](https://grafana.com/docs/k6/latest/) - Official k6 documentation with scripting guides, metrics reference, and CI/CD integration examples for performance testing.
 
 ### Free Tutorials and Blogs
 
-> *Coming soon — contributions welcome.*
+- [Test Automation University](https://testautomationu.applitools.com) - Free community-driven platform with 70+ courses by industry experts covering Playwright, Selenium, Cypress, API testing, and more.
+- [Martin Fowler — Testing Guide](https://martinfowler.com/testing/) - Authoritative articles on test architecture, the test pyramid, continuous delivery, and software design by Martin Fowler.
+- [Ministry of Testing](https://www.ministryoftesting.com) - The largest community platform for software testers with articles, tutorials, courses, forums, and live events.
+- [Google Testing Blog](https://testing.googleblog.com) - Engineering blog from Google's testing teams sharing practices, tools, and philosophies used at scale.
 
 ### Videos and Courses
 
-> *Coming soon — contributions welcome.*
+- [Playwright YouTube Channel](https://www.youtube.com/@Playwrightdev) - Official Playwright channel with tutorials, feature walkthroughs, and conference talks from the core team.
+- [Automation Step by Step](https://www.youtube.com/c/AutomationStepByStep) - Free YouTube channel by Raghav Pal covering Selenium, Playwright, Cypress, API testing, and CI/CD for all experience levels.
+- [SDET Unicorns](https://www.youtube.com/@SDETUnicorns) - Practical automation testing tutorials focused on real-world projects, framework building, and interview preparation.
 
 ### Books
 
-> *Coming soon — contributions welcome.*
+- [The Art of Software Testing](https://www.wiley.com/en-us/The+Art+of+Software+Testing%2C+3rd+Edition-p-9781118031964) - Glenford Myers' foundational book on software testing principles, test design, and debugging — essential reading for every QA professional.
+- [Agile Testing](https://www.addison-wesley.com/9780321534460) - Lisa Crispin and Janet Gregory's definitive guide to testing in agile teams covering testing quadrants, automation strategy, and team collaboration.
+- [How Google Tests Software](https://www.pearson.com/en-us/subject-catalog/p/how-google-tests-software/P200000009086) - Inside look at Google's testing philosophy, roles, and practices by James Whittaker, Jason Arbon, and Jeff Carollo.
+- [Continuous Delivery](https://continuousdelivery.com) - Jez Humble and Dave Farley's essential guide to building reliable software release pipelines through automated testing and deployment.
 
 ### Communities and Newsletters
 
-> *Coming soon — contributions welcome.*
+- [Ministry of Testing Community](https://www.ministryoftesting.com/community) - Active forum and community platform where testers discuss tools, practices, career advice, and share resources.
+- [r/QualityAssurance](https://www.reddit.com/r/QualityAssurance/) - Reddit community for QA professionals discussing testing practices, tools, career questions, and industry news.
+- [r/softwaretesting](https://www.reddit.com/r/softwaretesting/) - Reddit community focused on software testing methodologies, automation, and tooling discussions.
+- [Software Testing Weekly](https://softwaretestingweekly.com) - Weekly newsletter curating the best articles, tools, and discussions from across the software testing community.
 
 ---
 
