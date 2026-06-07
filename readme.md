@@ -316,9 +316,103 @@
 
 ## 💀 Hall of QA Failures
 
-> Real-world production bugs, outages, and failures — each mapped to the specific test type that would have prevented it.
+> Real-world production bugs, outages, and failures - each mapped to the specific test type that would have prevented it. Every entry is sourced from official postmortems, root cause analyses, and independent investigations.
 
-> *Coming soon — contributions welcome.*
+---
+
+### Therac-25 Radiation Overdoses (1985-1987)
+
+**What happened:** A race condition bug in the Therac-25 radiation therapy machine caused at least 6 patients to receive radiation doses up to 100x the prescribed amount. Three patients died. The bug was triggered when experienced operators typed commands quickly, causing safety checks to be skipped due to a timing conflict between concurrent processes. Hardware interlocks present in earlier models had been removed in favour of software-only controls - masking the same defect that existed in previous machines.
+
+**Root cause:** Race condition in concurrent input handling. Software reused from earlier models without re-testing in the new hardware context. No independent software safety verification. AECL claimed 2,760 hours of testing which turned out to mean 2,760 hours of usage - not formal validation.
+
+**What test would have caught it:**
+- **Concurrency testing** - testing rapid sequential inputs under timing stress would have exposed the race condition.
+- **Negative testing** - testing invalid state transitions would have caught the missing safety check.
+- **Integration testing** - testing software against the actual hardware configuration rather than assuming hardware interlocks would compensate.
+- **Independent safety verification** - a third-party test audit would have caught the absence of formal test plans.
+
+**Source:** [An Investigation of the Therac-25 Accidents - Leveson & Turner, IEEE Computer 1993](https://ieeexplore.ieee.org/document/274940)
+
+---
+
+### Knight Capital $440M Trading Loss (2012)
+
+**What happened:** Knight Capital deployed new trading software to 8 production servers but missed one. That server still ran a dormant 9-year-old legacy function called Power Peg which was accidentally reactivated by a reused flag bit in the new code. For 45 minutes the rogue server executed millions of unintended trades across 154 stocks, buying high and selling low automatically. Knight Capital lost $440 million - roughly its entire net worth - and was acquired within weeks.
+
+**Root cause:** Inconsistent deployment across production servers. Dead legacy code not removed from the codebase. No circuit breaker or automated kill switch to halt runaway trading. No environment parity validation between servers before go-live.
+
+**What test would have caught it:**
+- **Deployment validation testing** - verifying identical software state across all servers before go-live.
+- **Environment parity testing** - automated checks confirming no server diverges from the expected deployment state.
+- **Integration testing** - testing the interaction between new flag bits and existing legacy code paths.
+- **Chaos engineering** - simulating a rogue server scenario would have exposed the missing circuit breaker.
+
+**Source:** [Knight Capital SEC Filing August 2012](https://www.sec.gov/Archives/edgar/data/0001060749/000119312512332176/d391111dex991.htm) · [PRMIA Case Study](https://prmia.org/common/Uploaded%20files/eAI/PRMIA%20Case%20study%20-%20Knight%20Trading.pdf)
+
+---
+
+### Amazon S3 US-EAST-1 Outage (2017)
+
+**What happened:** An AWS engineer debugging a billing slowdown mistyped a single integer in a maintenance console command, accidentally removing a far larger set of servers than intended. Two critical S3 subsystems - the index subsystem and the placement subsystem - were taken offline. Because S3's own status dashboard was hosted on S3, it showed green throughout the outage. Recovery took over 4 hours because core subsystems had not been restarted in so long that the restart process itself was slow and unfamiliar. Slack, Netflix, Reddit, and hundreds of thousands of other sites were affected.
+
+**Root cause:** No minimum capacity guardrail on the removal command. No input validation preventing a single command from exceeding safe blast radius. Status page dependency on the same infrastructure it was monitoring. Infrequent restart cycles leaving recovery procedures untested.
+
+**What test would have caught it:**
+- **Input validation testing** - the command tool had no bounds check preventing removal of more than a safe threshold of capacity.
+- **Chaos engineering** - a controlled subsystem removal drill would have exposed both the blast radius and the slow restart recovery time.
+- **Resilience testing** - testing the status dashboard's independence from the services it monitors.
+- **Disaster recovery testing** - regularly rehearsing large-scale restarts would have made recovery faster and more familiar.
+
+**Source:** [AWS Official Postmortem](https://aws.amazon.com/message/41926/)
+
+---
+
+### Boeing 737 MAX MCAS Crashes (2018-2019)
+
+**What happened:** Boeing's MCAS (Maneuvering Characteristics Augmentation System) was designed to correct the 737 MAX's tendency to pitch up due to repositioned engines. MCAS relied on input from a single angle-of-attack (AoA) sensor with no redundancy. When that sensor failed and provided erroneous data on Lion Air Flight 610 and Ethiopian Airlines Flight 302, MCAS repeatedly forced the nose down against pilot resistance. Both crews were not informed MCAS existed. 346 people died across the two crashes. The 737 MAX was grounded for 20 months - the longest grounding in US aviation history - costing Boeing over $20 billion.
+
+**Root cause:** Single point of failure - MCAS relied on one sensor with no cross-check against a second. Safety analysis assumed pilots would recognise and respond to MCAS activation within 4 seconds - an assumption never validated through realistic simulator testing. Boeing's internal QA was compromised by schedule and cost pressures. The FAA delegated significant certification authority back to Boeing.
+
+**What test would have caught it:**
+- **Failure mode and effects testing (FMEA)** - systematically testing what happens when each sensor fails individually would have exposed the single-sensor dependency.
+- **Simulation testing under stress** - testing pilot response times under realistic cockpit load would have invalidated the 4-second recovery assumption.
+- **Sensor redundancy testing** - validating system behaviour with conflicting AoA sensor inputs.
+- **Independent safety verification** - third-party test audit rather than self-certification would have caught the missing redundancy.
+
+**Source:** [IEEE Spectrum - How the Boeing 737 MAX Disaster Looks to a Software Developer](https://spectrum.ieee.org/how-the-boeing-737-max-disaster-looks-to-a-software-developer) · [House Transportation Committee Final Report 2020](https://transportation.house.gov/imo/media/doc/2020.09.16%20FINAL%20737%20MAX%20Report%20for%20Public%20Release.pdf)
+
+---
+
+### Facebook Global Outage (2021)
+
+**What happened:** A routine BGP configuration change at Facebook accidentally withdrew the BGP routes that told the rest of the internet how to find Facebook's DNS nameservers. Facebook, Instagram, WhatsApp, and Oculus went completely dark for approximately 6 hours. Facebook's own internal tools used the same infrastructure, so engineers could not remotely access systems to apply a fix and had to physically travel to datacenters. Roughly 3.5 billion people lost access to the services simultaneously.
+
+**Root cause:** A configuration change command issued during routine maintenance had an unintended side effect of taking down all BGP route advertisements simultaneously. No staged rollout. The internal tooling used to audit and roll back configuration changes relied on the same network connectivity that had just been severed.
+
+**What test would have caught it:**
+- **Configuration change testing** - validating configuration commands in a staging environment mirroring production BGP topology before applying to live.
+- **Canary deployment testing** - rolling out network configuration changes to a small subset of infrastructure before global propagation.
+- **Resilience testing** - testing whether internal tooling remains accessible when core network infrastructure is degraded.
+- **Blast radius testing** - verifying that a single configuration command cannot affect all regions simultaneously.
+
+**Source:** [Facebook Engineering Blog - More Details About the October 4 Outage](https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/)
+
+---
+
+### CrowdStrike Global Outage (2024)
+
+**What happened:** CrowdStrike deployed a content configuration update (Channel File 291) for its Falcon sensor on July 19, 2024. The update contained an IPC Template Instance that specified 21 input fields, but the sensor code only supplied 20. The Content Validator had a logic error and did not catch the mismatch, partly because all previous test instances used wildcard matching on the 21st field. The sensor's Content Interpreter attempted an out-of-bounds memory read when processing the 21st parameter, causing the Windows kernel to crash. 8.5 million Windows devices showed the Blue Screen of Death globally. Banking, healthcare, airlines, and emergency services were disrupted for up to 72 hours. Estimated financial damage exceeded $3 billion.
+
+**Root cause:** Off-by-one parameter mismatch between the Template Type definition (21 fields) and the sensor code (20 fields). Content Validator logic error allowed the mismatch through. Test instances used wildcard matching on the 21st field - meaning the specific non-wildcard failure scenario was never exercised before production. No staged rollout - the update was pushed globally simultaneously.
+
+**What test would have caught it:**
+- **Boundary value testing** - explicitly testing the 21st parameter with non-wildcard values would have triggered the out-of-bounds read in a test environment.
+- **Input validation testing** - a strict schema check verifying field count parity between Template Type definition and sensor input.
+- **Staged rollout testing** - a canary deployment to 1% of sensors would have contained the blast radius to thousands rather than millions of devices.
+- **Content validation testing** - automated regression tests covering every Template Instance with concrete non-wildcard values before production release.
+
+**Source:** [CrowdStrike External Technical Root Cause Analysis - Channel File 291, August 6 2024](https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf)
 
 ---
 
