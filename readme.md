@@ -326,11 +326,11 @@
 
 **Root cause:** Race condition in concurrent input handling. Software reused from earlier models without re-testing in the new hardware context. No independent software safety verification. AECL claimed 2,760 hours of testing which turned out to mean 2,760 hours of usage - not formal validation.
 
-**What test would have caught it:**
-- **Concurrency testing** - testing rapid sequential inputs under timing stress would have exposed the race condition.
-- **Negative testing** - testing invalid state transitions would have caught the missing safety check.
-- **Integration testing** - testing software against the actual hardware configuration rather than assuming hardware interlocks would compensate.
-- **Independent safety verification** - a third-party test audit would have caught the absence of formal test plans.
+**What test would have caught it:** <br>
+**Concurrency testing** - testing rapid sequential inputs under timing stress would have exposed the race condition. <br> 
+**Negative testing** - testing invalid state transitions would have caught the missing safety check. <br> 
+**Integration testing** - testing software against the actual hardware configuration rather than assuming hardware interlocks would compensate. <br> 
+**Independent safety verification** - a third-party test audit would have caught the absence of formal test plans.
 
 **Source:** [An Investigation of the Therac-25 Accidents - Leveson & Turner, IEEE Computer 1993](https://ieeexplore.ieee.org/document/274940)
 
@@ -342,11 +342,11 @@
 
 **Root cause:** Inconsistent deployment across production servers. Dead legacy code not removed from the codebase. No circuit breaker or automated kill switch to halt runaway trading. No environment parity validation between servers before go-live.
 
-**What test would have caught it:**
-- **Deployment validation testing** - verifying identical software state across all servers before go-live.
-- **Environment parity testing** - automated checks confirming no server diverges from the expected deployment state.
-- **Integration testing** - testing the interaction between new flag bits and existing legacy code paths.
-- **Chaos engineering** - simulating a rogue server scenario would have exposed the missing circuit breaker.
+**What test would have caught it:** <br>
+**Deployment validation testing** - verifying identical software state across all servers before go-live. <br>
+**Environment parity testing** - automated checks confirming no server diverges from the expected deployment state. <br>
+**Integration testing** - testing the interaction between new flag bits and existing legacy code paths. <br>
+**Chaos engineering** - simulating a rogue server scenario would have exposed the missing circuit breaker.
 
 **Source:** [Knight Capital SEC Filing August 2012](https://www.sec.gov/Archives/edgar/data/0001060749/000119312512332176/d391111dex991.htm) · [PRMIA Case Study](https://prmia.org/common/Uploaded%20files/eAI/PRMIA%20Case%20study%20-%20Knight%20Trading.pdf)
 
@@ -358,11 +358,11 @@
 
 **Root cause:** No minimum capacity guardrail on the removal command. No input validation preventing a single command from exceeding safe blast radius. Status page dependency on the same infrastructure it was monitoring. Infrequent restart cycles leaving recovery procedures untested.
 
-**What test would have caught it:**
-- **Input validation testing** - the command tool had no bounds check preventing removal of more than a safe threshold of capacity.
-- **Chaos engineering** - a controlled subsystem removal drill would have exposed both the blast radius and the slow restart recovery time.
-- **Resilience testing** - testing the status dashboard's independence from the services it monitors.
-- **Disaster recovery testing** - regularly rehearsing large-scale restarts would have made recovery faster and more familiar.
+**What test would have caught it:** <br>
+**Input validation testing** - the command tool had no bounds check preventing removal of more than a safe threshold of capacity. <br>
+**Chaos engineering** - a controlled subsystem removal drill would have exposed both the blast radius and the slow restart recovery time. <br>
+**Resilience testing** - testing the status dashboard's independence from the services it monitors. <br>
+**Disaster recovery testing** - regularly rehearsing large-scale restarts would have made recovery faster and more familiar.
 
 **Source:** [AWS Official Postmortem](https://aws.amazon.com/message/41926/)
 
@@ -374,11 +374,11 @@
 
 **Root cause:** Single point of failure - MCAS relied on one sensor with no cross-check against a second. Safety analysis assumed pilots would recognise and respond to MCAS activation within 4 seconds - an assumption never validated through realistic simulator testing. Boeing's internal QA was compromised by schedule and cost pressures. The FAA delegated significant certification authority back to Boeing.
 
-**What test would have caught it:**
-- **Failure mode and effects testing (FMEA)** - systematically testing what happens when each sensor fails individually would have exposed the single-sensor dependency.
-- **Simulation testing under stress** - testing pilot response times under realistic cockpit load would have invalidated the 4-second recovery assumption.
-- **Sensor redundancy testing** - validating system behaviour with conflicting AoA sensor inputs.
-- **Independent safety verification** - third-party test audit rather than self-certification would have caught the missing redundancy.
+**What test would have caught it:** <br>
+**Failure mode and effects testing (FMEA)** - systematically testing what happens when each sensor fails individually would have exposed the single-sensor dependency. <br>
+**Simulation testing under stress** - testing pilot response times under realistic cockpit load would have invalidated the 4-second recovery assumption. <br>
+**Sensor redundancy testing** - validating system behaviour with conflicting AoA sensor inputs. <br>
+**Independent safety verification** - third-party test audit rather than self-certification would have caught the missing redundancy.
 
 **Source:** [IEEE Spectrum - How the Boeing 737 MAX Disaster Looks to a Software Developer](https://spectrum.ieee.org/how-the-boeing-737-max-disaster-looks-to-a-software-developer) · [House Transportation Committee Final Report 2020](https://transportation.house.gov/imo/media/doc/2020.09.16%20FINAL%20737%20MAX%20Report%20for%20Public%20Release.pdf)
 
@@ -390,11 +390,11 @@
 
 **Root cause:** A configuration change command issued during routine maintenance had an unintended side effect of taking down all BGP route advertisements simultaneously. No staged rollout. The internal tooling used to audit and roll back configuration changes relied on the same network connectivity that had just been severed.
 
-**What test would have caught it:**
-- **Configuration change testing** - validating configuration commands in a staging environment mirroring production BGP topology before applying to live.
-- **Canary deployment testing** - rolling out network configuration changes to a small subset of infrastructure before global propagation.
-- **Resilience testing** - testing whether internal tooling remains accessible when core network infrastructure is degraded.
-- **Blast radius testing** - verifying that a single configuration command cannot affect all regions simultaneously.
+**What test would have caught it:** <br>
+**Configuration change testing** - validating configuration commands in a staging environment mirroring production BGP topology before applying to live. <br>
+**Canary deployment testing** - rolling out network configuration changes to a small subset of infrastructure before global propagation. <br>
+**Resilience testing** - testing whether internal tooling remains accessible when core network infrastructure is degraded. <br>
+**Blast radius testing** - verifying that a single configuration command cannot affect all regions simultaneously. <br>
 
 **Source:** [Facebook Engineering Blog - More Details About the October 4 Outage](https://engineering.fb.com/2021/10/05/networking-traffic/outage-details/)
 
@@ -406,11 +406,11 @@
 
 **Root cause:** Off-by-one parameter mismatch between the Template Type definition (21 fields) and the sensor code (20 fields). Content Validator logic error allowed the mismatch through. Test instances used wildcard matching on the 21st field - meaning the specific non-wildcard failure scenario was never exercised before production. No staged rollout - the update was pushed globally simultaneously.
 
-**What test would have caught it:**
-- **Boundary value testing** - explicitly testing the 21st parameter with non-wildcard values would have triggered the out-of-bounds read in a test environment.
-- **Input validation testing** - a strict schema check verifying field count parity between Template Type definition and sensor input.
-- **Staged rollout testing** - a canary deployment to 1% of sensors would have contained the blast radius to thousands rather than millions of devices.
-- **Content validation testing** - automated regression tests covering every Template Instance with concrete non-wildcard values before production release.
+**What test would have caught it:** <br>
+**Boundary value testing** - explicitly testing the 21st parameter with non-wildcard values would have triggered the out-of-bounds read in a test environment. <br>
+**Input validation testing** - a strict schema check verifying field count parity between Template Type definition and sensor input. <br>
+**Staged rollout testing** - a canary deployment to 1% of sensors would have contained the blast radius to thousands rather than millions of devices. <br>
+**Content validation testing** - automated regression tests covering every Template Instance with concrete non-wildcard values before production release.
 
 **Source:** [CrowdStrike External Technical Root Cause Analysis - Channel File 291, August 6 2024](https://www.crowdstrike.com/wp-content/uploads/2024/08/Channel-File-291-Incident-Root-Cause-Analysis-08.06.2024.pdf)
 
