@@ -241,6 +241,7 @@
 
 - [Qodo](https://www.qodo.ai) - AI coding agent (formerly CodiumAI) that generates meaningful unit tests, reviews pull requests, and suggests code improvements directly inside VS Code and JetBrains IDEs.
 - [GitHub Copilot](https://github.com/features/copilot) - AI pair programmer by GitHub and OpenAI with a free tier that generates, completes, and explains test code across all major languages and IDEs.
+- [agent-qa](https://github.com/vostride/agent-qa) - Self-improving QA agent for natural-language web and mobile tests with run memory, UI-change adaptation, and regression detection.
 
 ### AI Code Review and Static Analysis
 
