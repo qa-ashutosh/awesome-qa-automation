@@ -40,6 +40,7 @@
 - [Cucumber.js](https://github.com/cucumber/cucumber-js) - BDD framework that runs Gherkin feature files in Node.js, connecting plain-language specs to step definitions.
 - [Robot Framework](https://github.com/robotframework/robotframework) - Keyword-driven acceptance testing framework with human-readable syntax and extensive library support.
 - [CodeceptJS](https://github.com/codeceptjs/CodeceptJS) - End-to-end testing framework with a human-friendly API built on top of Playwright and WebdriverIO.
+- [Optics Framework](https://github.com/mozarkai/optics-framework) - Keyword-driven test automation framework where plain CSV/YAML tests run over Appium, Selenium, and Playwright with self-healing locator fallback across XPath, text, OCR, and image strategies.
 
 ### Low-Code and All-in-One
 
