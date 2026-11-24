@@ -209,6 +209,7 @@
 - [Kiwi TCMS](https://github.com/kiwitcms/Kiwi) - Modern open-source test case management platform with a markdown editor, CI integration, JSON/XML-RPC API, and Docker-based deployment with over 2 million pulls.
 - [TestLink](https://github.com/TestLinkOpenSourceTRMS/testlink-code) - Established open-source web-based test management system for creating test cases, managing test plans, tracking execution, and generating reports with bug tracker integrations.
 - [Squash TM](https://github.com/flzara/squash-tm) - Open-core test management platform with requirements traceability, structured test plans, execution tracking, and automation linkage for compliance-heavy teams.
+- [Treseko Community](https://github.com/treseko/treseko-platform) - Open-source, self-hosted QA platform for organizing test cases, executing manual and automated tests, retaining evidence, and tracking bugs.
 
 ### Reporting Tools
 
